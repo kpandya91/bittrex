@@ -16,7 +16,7 @@ module Bittrex
       @raw = attrs
     end
 
-    def self.all
+    def self.all(client)
       client.get('account/getdeposithistory').map{|data| new(data) }
     end
 

@@ -45,7 +45,7 @@ module Bittrex
       client.get('market/getopenorders').map{|data| new(data) }
     end
 
-    def self.history
+    def self.history(client)
       client.get('account/getorderhistory').map{|data| new(data) }
     end
 

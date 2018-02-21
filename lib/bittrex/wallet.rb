@@ -13,7 +13,7 @@ module Bittrex
       @requested = attrs['Requested']
     end
 
-    def self.all
+    def self.all(client)
       client.get('account/getbalances').map{|data| new(data) }
     end
 
